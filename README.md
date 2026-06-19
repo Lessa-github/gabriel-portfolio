@@ -1,34 +1,46 @@
-# Gabriel Santa Rosa Lessa - Portfolio Website
+# Gabriel Santa Rosa Lessa — Portfolio
 
-A simple professional portfolio website for GitHub Pages.
+Personal portfolio website focused on cybersecurity, IT support, network support, and entry-level technology opportunities in Canada.
 
-## Privacy note
+## About
 
-This public version does **not** include a downloadable resume, phone number, home address, or direct email address. Contact is handled through LinkedIn.
+I am a Cybersecurity Risk Management student at the Canadian College of Technology and Business (CCTB) in Vancouver, BC. This portfolio highlights my technical skills, academic projects, hands-on labs, volunteer experience, and career interests in IT support and cybersecurity.
 
-## How to publish with GitHub Pages
+## Career Focus
 
-1. Create a new GitHub repository.
-2. Name it either:
-   - `gabriel-portfolio`, or
-   - `<your-github-username>.github.io` if you want it to be your main GitHub Pages site.
-3. Upload these files to the repository:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-   - `.nojekyll`
-   - `README.md`
-4. Go to **Settings → Pages**.
-5. Under **Build and deployment**, select:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-6. Save and wait for GitHub Pages to publish the website.
+* Cybersecurity Internship
+* Co-op Opportunities
+* IT Support Technician
+* Help Desk Support
+* Technical Support
+* Network Support
+* Entry-Level SOC / Security Operations
 
-## Recommended updates later
+## Technical Areas
 
-- Add a GitHub profile link when ready.
-- Add TryHackMe and Hack The Box links.
-- Add 2-3 documented cybersecurity projects.
-- Add certificates and screenshots only when they are ready and professional.
-- If you add a resume later, create a public version without phone number, home address, or direct email.
+* Cybersecurity Fundamentals
+* IT Support and Troubleshooting
+* Networking Fundamentals
+* Linux and Windows
+* AWS Fundamentals
+* Virtualization
+* SIEM Concepts
+* Incident Response Fundamentals
+* Log Analysis
+* Security Operations Center Concepts
+
+## Website
+
+Live portfolio:
+
+https://lessa-github.github.io/gabriel-portfolio/
+
+## Contact
+
+For professional contact, please reach out through LinkedIn:
+
+https://www.linkedin.com/in/gabriel-santa-rosa-lessa
+
+## Privacy Note
+
+This public repository does not include personal contact details such as phone number, home address, or a downloadable resume with private information.
