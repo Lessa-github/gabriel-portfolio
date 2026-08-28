@@ -50,7 +50,7 @@ class Particle {
 
 function initParticles() {
     particles = [];
-    const numParticles = (width * height) / 8000;
+    const numParticles = (width * height) / 10000;
     for (let i = 0; i < numParticles; i++) {
         particles.push(new Particle());
     }
@@ -63,18 +63,22 @@ function animateParticles() {
         particles[i].update();
         particles[i].draw();
         
-        for (let j = i; j < particles.length; j++) {
+        let connections = 0; // LIMITADOR DE CONEXOES PRA NAO TRAVAR A RAM
+        for (let j = i + 1; j < particles.length; j++) {
+            if (connections > 6) break; // Max 6 ligacoes por ponto
+            
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             
             if (distance < 160) {
                 ctx.beginPath();
-                ctx.strokeStyle = `rgba(6, 182, 212, ${0.25 - distance/800})`;
+                ctx.strokeStyle = gba(6, 182, 212, );
                 ctx.lineWidth = 0.5;
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
                 ctx.stroke();
+                connections++;
             }
         }
         
@@ -85,14 +89,21 @@ function animateParticles() {
             
             if (distance < mouse.radius) {
                 ctx.beginPath();
-                ctx.strokeStyle = `rgba(59, 130, 246, ${0.5 - distance/(mouse.radius*2)})`;
+                ctx.strokeStyle = gba(59, 130, 246, );
                 ctx.lineWidth = 1;
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(mouse.x, mouse.y);
                 ctx.stroke();
                 
-                particles[i].x -= dx * 0.05;
-                particles[i].y -= dy * 0.05;
+                // Nao deixa eles entrarem no EXATO mesmo pixel (evita o aglomerado q trava)
+                if (distance > 10) {
+                    particles[i].x -= dx * 0.04;
+                    particles[i].y -= dy * 0.04;
+                } else {
+                    // Repulsao leve se chegar muito perto
+                    particles[i].x += dx * 0.1;
+                    particles[i].y += dy * 0.1;
+                }
             }
         }
     }
@@ -155,5 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(aboutSection);
     }
 });
+
 
 
