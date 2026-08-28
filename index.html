@@ -3,19 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gabriel Santa Rosa Lessa - Cybersecurity Risk Management student in Vancouver, BC. Portfolio focused on IT support, networking, SOC fundamentals, and cybersecurity learning." />
-  <title>Gabriel Santa Rosa Lessa | Cybersecurity & IT Support Portfolio</title>
+  <meta name="description" content="Gabriel Santa Rosa Lessa – Cybersecurity Risk Management student in Vancouver, BC. Portfolio featuring SOC operations, threat intelligence, cloud security, HomeLab infrastructure, and hands-on labs." />
+  <meta name="keywords" content="cybersecurity, SOC analyst, IT support, SIEM, incident response, homelab, proxmox, Vancouver, co-op" />
+  <meta property="og:title" content="Gabriel Santa Rosa Lessa | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Cybersecurity student building practical skills in SOC operations, threat intelligence, cloud security, and HomeLab infrastructure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lessa-github.github.io/gabriel-portfolio/" />
+  <title>Gabriel Santa Rosa Lessa | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="logo" href="#home">Gabriel Lessa</a>
-      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <a class="logo" href="#home"><img src="assets/img/profile.png" alt="Gabriel Lessa" class="profile-logo"> <span class="logo-text">Gabriel Lessa</span></a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#homelab">HomeLab</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certs</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -24,195 +38,538 @@
   </header>
 
   <main>
+    <!-- ═══════════ HERO ═══════════ -->
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="eyebrow">Cybersecurity Risk Management Student · Vancouver, BC</p>
-          <h1>Gabriel Santa Rosa Lessa</h1>
+          <img src="assets/img/profile.png" alt="Gabriel Lessa" class="hero-profile-img">
+          <h1>Gabriel Santa Rosa<br /><span class="gradient-text">Lessa</span></h1>
+          <p class="eyebrow">
+            <span class="pulse-dot"></span>
+            Cybersecurity Risk Management · Vancouver, BC
+          </p>
           <p class="hero-subtitle">
-            Building practical skills in IT support, network support, SOC fundamentals, cloud security, and cybersecurity operations.
+            Building practical skills in <strong>SOC operations</strong>, <strong>threat intelligence</strong>,
+            <strong>cloud security</strong>, and <strong>homelab infrastructure</strong>.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="https://www.linkedin.com/in/gabriel-santa-rosa-lessa" target="_blank" rel="noopener">LinkedIn Profile</a>
+            <a class="btn primary" href="https://www.linkedin.com/in/gabriel-santa-rosa-lessa" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a class="btn secondary" href="https://github.com/lessa-github" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            
           </div>
         </div>
-        <aside class="hero-card" aria-label="Career focus summary">
-          <h2>Career Focus</h2>
-          <ul>
-            <li>Cybersecurity Intern / Co-op</li>
-            <li>IT Support Technician</li>
-            <li>Help Desk / Technical Support</li>
-            <li>Network Support</li>
-            <li>SOC Analyst Level 1</li>
-          </ul>
+        <aside class="hero-terminal" aria-label="Terminal-style career focus">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">~/career_focus.sh</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> <span class="cmd">cat</span> targets.txt</p>
+            <p class="output">→ SOC Analyst Level 1</p>
+            <p class="output">→ Cybersecurity Intern / Co-op</p>
+            <p class="output">→ IT Support Technician</p>
+            <p class="output">→ Network Support</p>
+            <p class="output">→ Help Desk / Technical Support</p>
+            <p>&nbsp;</p>
+            <p><span class="prompt">$</span> <span class="cmd">echo</span> $STATUS</p>
+            <p class="output highlight">Open to opportunities <span class="blink">▌</span></p>
+          </div>
         </aside>
       </div>
     </section>
 
+    <!-- ═══════════ ABOUT ═══════════ -->
     <section id="about" class="section">
       <div class="container two-column">
         <div>
           <p class="section-label">About</p>
-          <h2>Student focused on practical cybersecurity and IT support skills.</h2>
+          <h2>Dual-background cybersecurity student with hands-on project experience.</h2>
         </div>
         <div>
           <p>
-            I am a Cybersecurity Risk Management student at the Canadian College of Technology and Business (CCTB) in Vancouver, BC. I am developing foundational skills in IT support, networking, Linux, cybersecurity operations, risk management, troubleshooting, and security tools.
+            I am a <strong>Cybersecurity Risk Management</strong> student at the <strong>Canadian College of Technology and Business (CCTB)</strong> in Vancouver, BC, with a prior <strong>Associate Degree in Cyber Defense</strong> from Estácio de Sá University in Brazil.
           </p>
           <p>
-            My current learning focuses on Windows, Linux, Ubuntu, Kali Linux, TCP/IP networking, AWS, virtualization, SIEM concepts, IDS/IPS, EDR, incident response, and hands-on labs through coursework, TryHackMe, and Hack The Box Academy.
+            My current focus areas include <strong>SIEM operations</strong>, <strong>incident response</strong> (NIST SP 800-61), <strong>Cyber Threat Intelligence</strong> (MITRE ATT&CK mapping), <strong>cloud security on AWS</strong>, network reconnaissance with <strong>Nmap/Wireshark/Scapy</strong>, and defense-in-depth security architecture.
           </p>
           <p>
-            I am seeking entry-level opportunities in Canada, including co-op, internship, IT support, technical support, help desk, network support, and SOC-related roles.
+            Beyond coursework, I maintain a personal <strong>Proxmox VE HomeLab</strong> running 12+ production services in isolated LXC containers, practicing real-world Zero Trust networking, SSO integration, SIEM monitoring, and infrastructure automation.
           </p>
+
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-number" data-target="12">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">HomeLab Services</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="32">0</span><span class="stat-suffix">h</span>
+              <span class="stat-label">TryHackMe Labs</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Academic Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">Degrees</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section alt">
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section id="skills" class="section">
       <div class="container">
         <p class="section-label">Technical Skills</p>
-        <h2>Core skills and learning areas</h2>
+        <h2>Core competencies and tools</h2>
         <div class="skill-grid">
-          <div class="skill-card">
-            <h3>IT Support</h3>
-            <p>Technical support, help desk support, troubleshooting, customer service, communication, documentation, and problem solving.</p>
+          <div class="skill-card glass">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <h3>Cybersecurity &amp; SOC</h3>
+            <p>Threat intelligence (MITRE ATT&CK), incident response (NIST SP 800-61 / CSF 2.0), SIEM, IDS/IPS, EDR, log analysis, defense-in-depth architecture.</p>
           </div>
-          <div class="skill-card">
+          <div class="skill-card glass">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
             <h3>Networking</h3>
-            <p>TCP/IP, DNS, DHCP, network troubleshooting, network security fundamentals, and support for connected systems.</p>
+            <p>TCP/IP, DNS, DHCP, Nmap, Scapy, Wireshark, tcpdump, pfSense, Cisco Packet Tracer, WireGuard VPN, network segmentation.</p>
           </div>
-          <div class="skill-card">
-            <h3>Cybersecurity</h3>
-            <p>Cybersecurity fundamentals, information security, cyber defence, SOC concepts, incident response, SIEM concepts, IDS/IPS, EDR, and log analysis.</p>
+          <div class="skill-card glass">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
+            <h3>Cloud &amp; Infrastructure</h3>
+            <p>AWS EC2/VPC/ALB, Proxmox VE, Docker, LXC containers, VMware, VirtualBox, Linux server admin (Ubuntu, Kali, Debian).</p>
           </div>
-          <div class="skill-card">
-            <h3>Systems & Tools</h3>
-            <p>Windows, Linux, Ubuntu, Kali Linux, AWS, VMware, VirtualBox, Docker, WSL, Git, and GitHub.</p>
+          <div class="skill-card glass">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+            <h3>Development &amp; Automation</h3>
+            <p>Python, Django, REST APIs, MongoDB, Bash scripting, Git/GitHub multi-branch workflows, CI/CD, infrastructure-as-code.</p>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            <h3>Analytical &amp; SOC Skills</h3>
+            <p>Root-cause analysis, alert triage, escalation workflows, CTI reporting, risk assessment, RACI matrices, stakeholder documentation.</p>
+          </div>
+          <div class="skill-card glass">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+            <h3>IT Support &amp; Operations</h3>
+            <p>Help desk, troubleshooting, AV equipment, reverse proxy (Nginx), DNS filtering (AdGuard), monitoring (Uptime Kuma), SSO (Authentik).</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══════════ HOMELAB ═══════════ -->
+    <section id="homelab" class="section homelab-section">
+      <div class="container">
+        <div class="homelab-header">
+          <div>
+            <p class="section-label">
+              <span class="scan-pulse"></span>
+              HomeLab &amp; CyberLab
+            </p>
+            <h2>Personal Cybersecurity Infrastructure</h2>
+            <p class="homelab-intro">
+              A self-built <strong>Proxmox VE</strong> environment running on dedicated hardware, designed as a Zero Trust cybersecurity lab.
+              All services run in <strong>isolated unprivileged LXC containers</strong> with encrypted VPN mesh access, centralized SSO authentication, and automated monitoring.
+            </p>
+          </div>
+        </div>
+
+        <!-- Architecture Overview -->
+        <div class="arch-card glass">
+          <h3>🏗️ Architecture Overview</h3>
+          <div class="arch-specs">
+            <div class="spec">
+              <span class="spec-label">Hypervisor</span>
+              <span class="spec-value">Proxmox VE 9.x</span>
+            </div>
+            <div class="spec">
+              <span class="spec-label">Hardware</span>
+              <span class="spec-value">Intel 12th Gen Mini PC · 32 GB DDR4 · NVMe SSD</span>
+            </div>
+            <div class="spec">
+              <span class="spec-label">Network</span>
+              <span class="spec-value">Isolated Bridge · NAT Masquerade · WireGuard Mesh VPN</span>
+            </div>
+            <div class="spec">
+              <span class="spec-label">Access</span>
+              <span class="spec-value">Zero Port Forwarding · SSH Ed25519 Key-Only · SSO + WebAuthn Passkeys</span>
+            </div>
+            <div class="spec">
+              <span class="spec-label">DNS &amp; SSL</span>
+              <span class="spec-value">Wildcard SSL (Let's Encrypt + DNS Challenge) · AdGuard Home DNS Filtering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <h3 class="services-title">Running Services <span class="service-count">12+ containers</span></h3>
+        <div class="service-grid">
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 5-3 10 0 14 0 0-4-1-6-5-1 7 4 11 6 11s6-4 5-11c-2 4-6 5-6 5 3-4 4-9 0-14z"></path></svg></div>
+            <h4>OPNsense Firewall</h4>
+            <p>Virtualized firewall/router with VLAN segmentation, reply-to rules for reverse proxy, and air-gapped network isolation for malware analysis.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+            <h4>Authentik SSO</h4>
+            <p>Central Identity Provider with OIDC/OAuth2, WebAuthn/Passkeys biometric MFA, and step-up authentication for all services.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+            <h4>Nginx Proxy Manager</h4>
+            <p>Reverse proxy with wildcard SSL certificates via DuckDNS DNS-Challenge, WebSocket support, and HTTP/2 secure routing.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></div>
+            <h4>Vaultwarden</h4>
+            <p>Self-hosted Bitwarden-compatible password manager with SSO integration, disabled public signups, and encrypted vault.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+            <h4>Matrix Synapse + Element</h4>
+            <p>Federated encrypted messaging with OIDC SSO integration, LiveKit WebRTC voice/video, and role-based access control.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
+            <h4>Uptime Kuma</h4>
+            <p>Infrastructure monitoring with 18+ service monitors, status page, alerting, and real-time health telemetry.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <h4>AdGuard Home</h4>
+            <p>Network-wide DNS filtering and ad blocking for all HomeLab containers, with query logging and analytics.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+            <h4>SimpleLogin</h4>
+            <p>Self-hosted email alias service (Proton-compatible) for privacy-focused email management and anti-spam protection.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg></div>
+            <h4>AI Agent Workspace</h4>
+            <p>Dedicated container for autonomous AI coding agents with Docker, Ollama local LLM inference, and multi-agent orchestration.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg></div>
+            <h4>OmniRoute AI Gateway</h4>
+            <p>Intelligent AI API router with rate-limit management (RPM/RPD), multi-provider load balancing across free-tier LLM APIs.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></div>
+            <h4>Dozzle &amp; Homepage</h4>
+            <p>Real-time Docker log viewer and unified dashboard with Proxmox API telemetry for infrastructure overview.</p>
+          </div>
+
+          <div class="service-card glass">
+            <div class="service-status running"></div>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+            <h4>Kali Linux VM</h4>
+            <p>Penetration testing workstation accessible via WireGuard mesh VPN with SSH key-only auth, headless mode, and X11 forwarding.</p>
+          </div>
+        </div>
+
+        <!-- Security Highlights -->
+        <div class="security-highlights glass">
+          <h3>🔒 Security Architecture Highlights</h3>
+          <div class="highlight-grid">
+            <div class="highlight-item">
+              <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <div>
+                <strong>Zero Trust Access</strong>
+                <p>No ports exposed to the public internet. All access through encrypted WireGuard mesh VPN overlay.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <div>
+                <strong>SSH Hardened</strong>
+                <p>Password authentication disabled. Ed25519 key-only access with root login restricted to key-based auth.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <div>
+                <strong>Network Isolation</strong>
+                <p>All containers run on isolated internal bridge with NAT masquerade. No direct exposure to home network.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <div>
+                <strong>Centralized SSO + Passkeys</strong>
+                <p>WebAuthn biometric authentication via Authentik for all critical services with step-up verification.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Planned Expansions -->
+        <div class="expansion-card glass">
+          <h3>🚀 Advanced CyberLab Capabilities</h3>
+          <div class="expansion-grid">
+            <div class="expansion-item">
+              <span class="expansion-status active">Active</span>
+              <strong>Wazuh SIEM/XDR</strong> — Log collection, rule-based alerting, and AI-forwarded alert summarization.
+            </div>
+            <div class="expansion-item">
+              <span class="expansion-status active">Active</span>
+              <strong>Active Directory Lab</strong> — Windows Server DC + Client for Kerberoasting and Pass-the-Hash practice.
+            </div>
+            <div class="expansion-item">
+              <span class="expansion-status active">Active</span>
+              <strong>Malware Analysis Sandbox</strong> — Air-gapped VLAN with INetSim for safe malware detonation and DFIR.
+            </div>
+            <div class="expansion-item">
+              <span class="expansion-status active">Active</span>
+              <strong>Nessus Vulnerability Scanner</strong> — Automated vulnerability assessment across the isolated LAN.
+            </div>
+            <div class="expansion-item">
+              <span class="expansion-status active">Active</span>
+              <strong>Splunk Training Instance</strong> — SPL query training with BOTSv1 competition log datasets.
+            </div>
+            <div class="expansion-item">
+              <span class="expansion-status active">Active</span>
+              <strong>Whonix Gateway</strong> — Tor-routed VMs for OSINT research with zero IP leakage.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PROJECTS ═══════════ -->
     <section id="projects" class="section">
       <div class="container">
-        <p class="section-label">Projects & Labs</p>
-        <h2>Academic and hands-on cybersecurity learning</h2>
+        <p class="section-label">Projects &amp; Labs</p>
+        <h2>Academic and hands-on cybersecurity projects</h2>
         <div class="project-list">
-          <article class="project-card">
-            <div>
-              <h3>TryHackMe Cybersecurity Labs</h3>
-              <p class="meta">Networking · Linux · Security Fundamentals</p>
+
+          <article class="project-card glass featured">
+            <div class="project-badge">Academic Project · 2026</div>
+            <h3>Cyber Threat Intelligence (CTI) &amp; Adversary Intrusion Assessment</h3>
+            <p class="meta">MITRE ATT&CK · NIST SP 800-61 · PowerShell · Registry Analysis</p>
+            <p>Analyzed a multi-stage enterprise intrusion involving spearphishing (.docm), PowerShell execution, and SAM registry credential dumping. Mapped threat actor tactics to MITRE ATT&CK and authored a comprehensive CTI report with containment strategies aligned with NIST CSF 2.0.</p>
+            <div class="project-tags">
+              <span class="tag">Pass-the-Hash</span>
+              <span class="tag">SAM Registry</span>
+              <span class="tag">Incident Response</span>
+              <span class="tag">CTI Report</span>
             </div>
-            <p>
-              Completed hands-on labs to strengthen foundational knowledge in networking, Linux, and cybersecurity concepts used in IT support and entry-level security operations.
-            </p>
           </article>
 
-          <article class="project-card">
-            <div>
-              <h3>Hack The Box Academy Learning</h3>
-              <p class="meta">Networking Fundamentals · Cybersecurity Practice</p>
+          <article class="project-card glass featured">
+            <div class="project-badge">Academic Project · 2026</div>
+            <h3>Enterprise Security Architecture &amp; SOC Operating Model</h3>
+            <p class="meta">Defense-in-Depth · SOC Tiers · RACI Matrix · NIST CSF 2.0</p>
+            <p>Designed a multi-site enterprise network protecting a HQ Data Center, DMZ with 200 VMs, and 7 remote branches. Defined SOC operational framework with RACI matrix across Tier 1–3, Threat Hunting, DFIR, and Detection Engineering. Integrated Palo Alto WildFire, Thinkst Canary, and Proofpoint.</p>
+            <div class="project-tags">
+              <span class="tag">Palo Alto NGFW</span>
+              <span class="tag">Honeypots</span>
+              <span class="tag">Detection Engineering</span>
+              <span class="tag">Segmentation</span>
             </div>
-            <p>
-              Used guided modules to reinforce core technical topics, including networking fundamentals, structured learning, and practical cybersecurity problem solving.
-            </p>
           </article>
 
-          <article class="project-card">
-            <div>
-              <h3>CCTB Cybersecurity Coursework</h3>
-              <p class="meta">SOC Concepts · Risk Management · Network Troubleshooting</p>
+          <article class="project-card glass featured">
+            <div class="project-badge">Academic Project · 2025–2026</div>
+            <h3>AWS Cloud Infrastructure &amp; Database Security Automation</h3>
+            <p class="meta">AWS EC2 · VPC · Python/Django · MongoDB · REST APIs</p>
+            <p>Built multi-tier applications on AWS EC2 with secure Python/Django backends connected to remote MongoDB. Provisioned VPC subnets, Security Groups, and Load Balancers. Integrated Cisco DNA Center and OpenRouteService REST APIs with Git multi-branch workflows.</p>
+            <div class="project-tags">
+              <span class="tag">AWS VPC</span>
+              <span class="tag">Load Balancing</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Git Workflows</span>
             </div>
-            <p>
-              Building academic and practical understanding of security operations, risk management, incident response, network security, and cybersecurity tools through college assignments and labs.
-            </p>
+          </article>
+
+          <article class="project-card glass">
+            <h3>TryHackMe Cybersecurity Labs</h3>
+            <p class="meta">Networking · Linux · Security Fundamentals · 32h+ Completed</p>
+            <p>Completed the CAPTSTONE_JAN 2026 Learning Path (32h 30min) with hands-on labs in networking, Linux, and cybersecurity concepts.</p>
+          </article>
+
+          <article class="project-card glass">
+            <h3>Hack The Box Academy Learning</h3>
+            <p class="meta">Networking Fundamentals · Cybersecurity Practice</p>
+            <p>Guided modules reinforcing networking fundamentals, structured learning, and practical cybersecurity problem solving.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section alt">
+    <!-- ═══════════ CERTIFICATIONS ═══════════ -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <p class="section-label">Certifications &amp; Learning</p>
+        <h2>Verified achievements</h2>
+        <div class="cert-grid">
+          <div class="cert-card glass">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></div>
+            <h3>TryHackMe – CAPTSTONE_JAN 2026</h3>
+            <p class="cert-detail">Learning Path · 32h 30min</p>
+            <p class="cert-date">Completed July 27, 2026</p>
+            <span class="cert-status verified">✓ Verified</span>
+          </div>
+          <div class="cert-card glass">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+            <h3>Hack The Box Academy</h3>
+            <p class="cert-detail">Networking · Cybersecurity Modules</p>
+            <p class="cert-date">Ongoing</p>
+            <span class="cert-status active">In Progress</span>
+          </div>
+          <div class="cert-card glass">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+            <h3>CCTB Cybersecurity Coursework</h3>
+            <p class="cert-detail">SOC · Risk Management · Cloud Security · CTI</p>
+            <p class="cert-date">Expected Aug 2026</p>
+            <span class="cert-status active">In Progress</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section id="experience" class="section">
       <div class="container">
         <p class="section-label">Experience</p>
         <h2>Professional and volunteer experience</h2>
         <div class="timeline">
           <article class="timeline-item">
-            <div class="timeline-header">
-              <h3>Student Check-in Assistant</h3>
-              <span>Aug 2025 – Present</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-header">
+                <h3>Student Check-in Assistant</h3>
+                <span class="timeline-date">Aug 2025 – Present</span>
+              </div>
+              <p class="meta">StayWise Accommodations · Vancouver, BC</p>
+              <ul>
+                <li>Support student check-ins/check-outs with clear guidance during arrivals and departures.</li>
+                <li>Coordinate move-ins, key handoffs, late check-ins, and accommodation instructions.</li>
+                <li>Apply attention to detail, communication, and customer service skills daily.</li>
+              </ul>
             </div>
-            <p class="meta">StayWise Accommodations · Vancouver, BC</p>
-            <ul>
-              <li>Support student check-ins and check-outs by providing clear information and guidance during arrivals and departures.</li>
-              <li>Assist with move-in coordination, key handoff, late check-ins, and accommodation instructions.</li>
-              <li>Apply attention to detail, communication, organization, and customer service skills in a student-facing environment.</li>
-            </ul>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-header">
-              <h3>Volunteer Technical Support / Camera Operations</h3>
-              <span>Jun 2025 – Aug 2025</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-header">
+                <h3>Volunteer Technical Support / Camera Operations</h3>
+                <span class="timeline-date">Jun 2025 – Aug 2025</span>
+              </div>
+              <p class="meta">Faith Fellowship Baptist Church · Vancouver, BC</p>
+              <ul>
+                <li>Supported live camera operations for weekly services and special events.</li>
+                <li>Assisted with technical troubleshooting for audio-visual equipment.</li>
+                <li>Ensured smooth video production and reliable technical setup.</li>
+              </ul>
             </div>
-            <p class="meta">Faith Fellowship Baptist Church · Vancouver, BC</p>
-            <ul>
-              <li>Supported live camera operations for weekly services and special events.</li>
-              <li>Assisted with basic technical support and troubleshooting for audio-visual equipment.</li>
-              <li>Helped ensure smooth video production and reliable technical setup during services.</li>
-            </ul>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-header">
-              <h3>Operations Assistant</h3>
-              <span>Jan 2018 – Dec 2020</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-header">
+                <h3>Operations Assistant</h3>
+                <span class="timeline-date">Jan 2018 – Dec 2020</span>
+              </div>
+              <p class="meta">Granulado Brigaderia · Niterói, RJ, Brazil</p>
+              <ul>
+                <li>Supported daily operations including customer service, cash handling, and POS systems.</li>
+                <li>Managed inventory organization and general operational tasks.</li>
+                <li>Developed skills in responsibility, communication, and time management.</li>
+              </ul>
             </div>
-            <p class="meta">Granulado Brigaderia · Niterói, RJ, Brazil</p>
-            <ul>
-              <li>Supported daily store operations, including customer service, cash handling, and operational tasks.</li>
-              <li>Assisted with POS system tasks, inventory organization, and general support.</li>
-              <li>Developed transferable skills in responsibility, communication, problem solving, and time management.</li>
-            </ul>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ═══════════ EDUCATION ═══════════ -->
     <section id="education" class="section">
       <div class="container">
         <p class="section-label">Education</p>
-        <h2>Education</h2>
+        <h2>Academic background</h2>
         <div class="education-list">
-          <article class="education-card">
-            <div class="timeline-header">
-              <h3>Diploma in Cybersecurity Risk Management</h3>
-              <span>May 2025 – Expected May 2028</span>
+          <article class="education-card glass">
+            <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+            <div>
+              <div class="timeline-header">
+                <h3>Diploma in Cybersecurity Risk Management</h3>
+                <span class="timeline-date">May 2025 – Expected May 2028</span>
+              </div>
+              <p class="meta">Canadian College of Technology and Business (CCTB) · Vancouver, BC</p>
+              <p>Coursework: SIEM, incident response, network security, threat intelligence, cloud security, Linux/Windows security, risk management, business continuity. Academic portion expected August 2026, followed by co-op placement.</p>
             </div>
-            <p class="meta">Canadian College of Technology and Business (CCTB) · Vancouver, BC</p>
-            <p>Academic coursework expected to finish in August 2026, followed by a mandatory co-op work placement as part of the program.</p>
           </article>
 
-          <article class="education-card">
-            <div class="timeline-header">
-              <h3>Associate Degree in Cyber Defense</h3>
-              <span>2020 – 2022</span>
+          <article class="education-card glass">
+            <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+            <div>
+              <div class="timeline-header">
+                <h3>Associate Degree in Cyber Defense</h3>
+                <span class="timeline-date">2020 – 2022</span>
+              </div>
+              <p class="meta">Estácio de Sá University · Brazil</p>
+              <p>Foundational studies in cybersecurity, information security, networking, systems, and cyber defence concepts.</p>
             </div>
-            <p class="meta">Estácio · Brazil</p>
-            <p>Completed foundational studies in cybersecurity, information security, networking, systems, and cyber defence concepts.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ═══════════ CONTACT ═══════════ -->
     <section id="contact" class="section contact-section">
-      <div class="container contact-card">
-        <p class="section-label">Contact</p>
-        <h2>Open to co-op, internship, volunteer, and entry-level technology opportunities.</h2>
-        <p>Based in Vancouver, BC. Available for IT support, technical support, network support, and cybersecurity-related opportunities.</p>
-        <p>For contact, please connect with me through LinkedIn.</p>
-        <div class="contact-actions">
-          <a class="btn primary" href="https://www.linkedin.com/in/gabriel-santa-rosa-lessa" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <div class="container">
+        <div class="contact-card glass">
+          <p class="section-label">Contact</p>
+          <h2>Open to co-op, internship, and entry-level cybersecurity opportunities.</h2>
+          <p>Based in Vancouver, BC. Available for SOC analyst, IT support, technical support, network support, and cybersecurity roles.</p>
+          <div class="contact-actions">
+            <a class="btn primary" href="https://www.linkedin.com/in/gabriel-santa-rosa-lessa" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Connect on LinkedIn
+            </a>
+            <a class="btn secondary" href="assets/Gabriel_Lessa_Resume_Public.pdf" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Resume
+            </a>
+            <a class="btn secondary-contact" href="https://github.com/lessa-github" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub Profile
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -220,11 +577,20 @@
 
   <footer class="footer">
     <div class="container footer-content">
-      <p>© <span id="year"></span> Gabriel Santa Rosa Lessa. All rights reserved.</p>
-      <a href="#home">Back to top ↑</a>
+      <p>© <span id="year"></span> Gabriel Santa Rosa Lessa</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/gabriel-santa-rosa-lessa" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/lessa-github" target="_blank" rel="noopener">GitHub</a>
+        <a href="#home">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
