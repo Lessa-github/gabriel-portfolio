@@ -61,7 +61,10 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               GitHub
             </a>
-            
+            <a class="btn secondary" href="assets/Gabriel_Lessa_Resume_Public.pdf" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Resume
+            </a>
           </div>
         </div>
         <aside class="hero-terminal" aria-label="Terminal-style career focus">
@@ -196,25 +199,25 @@
             </div>
             <div class="spec">
               <span class="spec-label">Hardware</span>
-              <span class="spec-value">Intel 12th Gen Mini PC · 32 GB DDR4 · NVMe SSD</span>
+              <span class="spec-value">Custom Low-Power Microserver · 32 GB DDR4 · SSD Storage</span>
             </div>
             <div class="spec">
               <span class="spec-label">Network</span>
-              <span class="spec-value">Isolated Bridge · NAT Masquerade · WireGuard Mesh VPN</span>
+              <span class="spec-value">Isolated Bridges (vmbr0/1/2) · WireGuard Mesh VPN</span>
             </div>
             <div class="spec">
               <span class="spec-label">Access</span>
-              <span class="spec-value">Zero Port Forwarding · SSH Ed25519 Key-Only · SSO + WebAuthn Passkeys</span>
+              <span class="spec-value">Zero Port Forwarding · SSH Ed25519 · SSO + WebAuthn Passkeys</span>
             </div>
             <div class="spec">
               <span class="spec-label">DNS &amp; SSL</span>
-              <span class="spec-value">Wildcard SSL (Let's Encrypt + DNS Challenge) · AdGuard Home DNS Filtering</span>
+              <span class="spec-value">Wildcard SSL (Let's Encrypt + DNS Challenge) · AdGuard Home</span>
             </div>
           </div>
         </div>
 
         <!-- Services Grid -->
-        <h3 class="services-title">Running Services <span class="service-count">12+ containers</span></h3>
+        <h3 class="services-title">Core Production Services <span class="service-count">24/7 Zero-Trust Mesh</span></h3>
         <div class="service-grid">
 
           <div class="service-card glass">
@@ -296,9 +299,9 @@
 
           <div class="service-card glass">
             <div class="service-status running"></div>
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-            <h4>Kali Linux VM</h4>
-            <p>Penetration testing workstation accessible via WireGuard mesh VPN with SSH key-only auth, headless mode, and X11 forwarding.</p>
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
+            <h4>Elastic Auto-Scaler &amp; Vault</h4>
+            <p>Native Python cgroups v2 governor (+1GB RAM under load, -256MB decay) and Zero-Knowledge memory-only secret vault.</p>
           </div>
         </div>
 
@@ -313,21 +316,21 @@
               <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
               <div>
                 <strong>Zero Trust Access</strong>
-                <p>No ports exposed to the public internet. All access through encrypted WireGuard mesh VPN overlay.</p>
+                <p>No ports exposed to the public internet. All access routed through encrypted NetBird WireGuard mesh VPN overlay.</p>
               </div>
             </div>
             <div class="highlight-item">
               <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
               <div>
                 <strong>SSH Hardened</strong>
-                <p>Password authentication disabled. Ed25519 key-only access with root login restricted to key-based auth.</p>
+                <p>Password authentication disabled. Ed25519 key-only access with root login restricted to cryptographic keys.</p>
               </div>
             </div>
             <div class="highlight-item">
               <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
               <div>
-                <strong>Network Isolation</strong>
-                <p>All containers run on isolated internal bridge with NAT masquerade. No direct exposure to home network.</p>
+                <strong>Multi-Bridge Network Isolation</strong>
+                <p>Triple bridge segmentation (<code>vmbr0</code> production, <code>vmbr1</code> air-gapped lab, <code>vmbr2</code> Tor gateway) with firewall isolation.</p>
               </div>
             </div>
             <div class="highlight-item">
@@ -337,39 +340,56 @@
                 <p>WebAuthn biometric authentication via Authentik for all critical services with step-up verification.</p>
               </div>
             </div>
+            <div class="highlight-item">
+              <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <div>
+                <strong>Elastic Resource Governor</strong>
+                <p>Native Python cgroups v2 auto-scaler dynamically managing memory pressure (+1GB/-256MB) and preserving host stability.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <div>
+                <strong>Zero-Knowledge Secret Vault</strong>
+                <p>Shannon entropy evaluation and indirect memory-only injection ensuring credentials never touch disk unencrypted.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Planned Expansions -->
+        <!-- Planned Expansions / CyberLab -->
         <div class="expansion-card glass">
           <div class="tech-heading-stacked">
-            <span class="tech-badge-pulse"><span class="pulse-dot-cyan"></span>ACTIVE_LABS</span>
-            <h3>Advanced CyberLab Capabilities</h3>
+            <span class="tech-badge-pulse"><span class="pulse-dot-cyan"></span>CYBERLAB_ON_DEMAND</span>
+            <h3>Isolated CyberLab Capabilities</h3>
           </div>
+          <p style="color: var(--text-secondary); margin-top: -1rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
+            Specialized testing environments activated on-demand across isolated internal bridges (<code>vmbr1</code> / <code>vmbr2</code>) to preserve hypervisor resources and prevent lateral movement into production.
+          </p>
           <div class="expansion-grid">
             <div class="expansion-item">
-              <span class="expansion-status active">Active</span>
-              <strong>Wazuh SIEM/XDR</strong> — Log collection, rule-based alerting, and AI-forwarded alert summarization.
+              <span class="expansion-status active">Air-Gapped</span>
+              <strong>Malware Analysis Sandbox</strong> — Completely air-gapped subnet (<code>vmbr1</code>: 172.16.0.0/24) with INetSim simulating web/DNS/mail services for safe malware detonation and DFIR artifact extraction.
             </div>
             <div class="expansion-item">
               <span class="expansion-status active">Active</span>
-              <strong>Active Directory Lab</strong> — Windows Server DC + Client for Kerberoasting and Pass-the-Hash practice.
+              <strong>Wazuh SIEM / XDR</strong> — Endpoint telemetry ingestion, custom detection rules, and automated event correlation for continuous security monitoring.
             </div>
             <div class="expansion-item">
-              <span class="expansion-status active">Active</span>
-              <strong>Malware Analysis Sandbox</strong> — Air-gapped VLAN with INetSim for safe malware detonation and DFIR.
+              <span class="expansion-status active">Threat Intel</span>
+              <strong>OpenCTI Platform (CT 120)</strong> — Structured Cyber Threat Intelligence management, STIX 2.1 data feed ingestion, and MITRE ATT&CK enterprise adversary mapping.
             </div>
             <div class="expansion-item">
-              <span class="expansion-status active">Active</span>
-              <strong>Nessus Vulnerability Scanner</strong> — Automated vulnerability assessment across the isolated LAN.
+              <span class="expansion-status active">Assessment</span>
+              <strong>DefectDojo &amp; SpiderFoot (CT 121)</strong> — Vulnerability tracking, automated reporting pipeline, and OSINT attack surface reconnaissance.
             </div>
             <div class="expansion-item">
-              <span class="expansion-status active">Active</span>
-              <strong>Splunk Training Instance</strong> — SPL query training with BOTSv1 competition log datasets.
+              <span class="expansion-status active">Dark Web</span>
+              <strong>Robin AI &amp; Whonix Gateway (CT 119)</strong> — Dedicated Tor onion-routing gateway on isolated bridge (<code>vmbr2</code>) for OSINT and dark web investigations with zero host IP leakage.
             </div>
             <div class="expansion-item">
-              <span class="expansion-status active">Active</span>
-              <strong>Whonix Gateway</strong> — Tor-routed VMs for OSINT research with zero IP leakage.
+              <span class="expansion-status active">Red Team</span>
+              <strong>Active Directory Attack Lab</strong> — Windows Server domain controller and workstation pair for practicing Kerberoasting, AS-REP roasting, and pass-the-hash privilege escalations.
             </div>
           </div>
         </div>
@@ -382,6 +402,22 @@
         <p class="section-label">Projects &amp; Labs</p>
         <h2>Academic and hands-on cybersecurity projects</h2>
         <div class="project-list">
+
+          <article class="project-card glass featured">
+            <div class="project-badge">Production Architecture · 2026</div>
+            <h3>Proxmox Zero-Trust Infrastructure &amp; Autonomous AI Agent Platform</h3>
+            <p class="meta">Proxmox VE · cgroups v2 Auto-Scaler · Zero-Knowledge Vault · Multi-Bridge Isolation · OmniRoute AI Gateway</p>
+            <p>Architected, deployed, and automated a hardened Proxmox VE hypervisor running 12+ core production services and on-demand air-gapped cyberlabs. Engineered a native Python tri-resource elastic auto-scaler (+1GB RAM under load with 256MB graceful decay via cgroups v2), an in-memory Zero-Knowledge secret vault with Shannon entropy quarantine, multi-bridge network segmentation (<code>vmbr0</code> production, <code>vmbr1</code> air-gapped, <code>vmbr2</code> Tor gateway), and an autonomous AI multi-agent orchestration engine with 100% offline local LLM fallback.</p>
+            <div class="project-tags">
+              <span class="tag">Elastic Auto-Scaler</span>
+              <span class="tag">Zero-Knowledge Vault</span>
+              <span class="tag">cgroups v2</span>
+              <span class="tag">Air-Gapped Sandbox</span>
+              <span class="tag">WireGuard Mesh</span>
+              <span class="tag">OmniRoute AI</span>
+              <span class="tag">MITRE ATT&CK</span>
+            </div>
+          </article>
 
           <article class="project-card glass featured">
             <div class="project-badge">Academic Project · 2026</div>
@@ -461,7 +497,7 @@
             <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
             <h3>CCTB Cybersecurity Coursework</h3>
             <p class="cert-detail">SOC · Risk Management · Cloud Security · CTI</p>
-            <p class="cert-date">Expected Aug 2026</p>
+            <p class="cert-date">Diploma Program · 2025 – Present</p>
             <span class="cert-status active">In Progress</span>
           </div>
         </div>
@@ -539,7 +575,7 @@
                 <span class="timeline-date">May 2025 – Expected May 2028</span>
               </div>
               <p class="meta">Canadian College of Technology and Business (CCTB) · Vancouver, BC</p>
-              <p>Coursework: SIEM, incident response, network security, threat intelligence, cloud security, Linux/Windows security, risk management, business continuity. Academic portion expected August 2026, followed by co-op placement.</p>
+              <p>Coursework: SIEM, incident response, network security, threat intelligence, cloud security, Linux/Windows security, risk management, and business continuity, followed by cybersecurity co-op placement.</p>
             </div>
           </article>
 
