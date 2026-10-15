@@ -85,14 +85,33 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
   background: rgba(0, 0, 0, 0.96); backdrop-filter: blur(12px);
   padding: 1rem 0; border-bottom: 1px solid var(--border-color);
 }
-.nav { display: flex; justify-content: space-between; align-items: center; }
+.nav { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
 .logo {
   display: flex; align-items: center; gap: 0.75rem;
   font-weight: 700; color: #fff; font-size: 1.1rem;
+  flex-shrink: 0;
 }
+.logo-text { white-space: nowrap; }
 .logo svg { color: var(--accent-cyan); }
-.nav-links { display: flex; gap: 2rem; }
-.nav-links a { color: var(--text-secondary); font-size: 0.85rem; background: #0a0a0a; border: 1px solid #27272a; padding: 0.4rem 1rem; border-radius: 99px; transition: all 0.3s; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1;
+  white-space: nowrap;
+  background: #0a0a0a;
+  border: 1px solid #27272a;
+  padding: 0.42rem 0.85rem;
+  border-radius: 99px;
+  transition: all 0.3s;
+}
 .nav-links a:hover, .nav-links a.active { color: #fff; background: #18181b; border-color: var(--accent-cyan); }
 
 /* HERO */
@@ -218,7 +237,11 @@ h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
   h1 { font-size: 2.5rem; }
   .stats-row { flex-wrap: wrap; }
 }
-@media (max-width: 600px) { .nav-links { display: none; } }
+@media (max-width: 1080px) {
+  .nav-links { gap: 0.35rem; }
+  .nav-links a { padding: 0.35rem 0.65rem; font-size: 0.78rem; }
+}
+@media (max-width: 768px) { .nav-links { display: none; } }
 
 
 /* Profile Logo in Header */
