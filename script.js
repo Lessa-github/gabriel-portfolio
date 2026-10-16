@@ -164,3 +164,63 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(aboutSection);
     }
 });
+
+// ==========================================
+// HEADER SCROLL & MOBILE NAVIGATION DRAWER
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.site-header');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Create backdrop element if it doesn't exist
+    let backdrop = document.querySelector('.nav-backdrop');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+    }
+
+    // Scroll listener for sticky header background
+    const handleScroll = () => {
+        if (!header) return;
+        if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    // Toggle mobile menu drawer
+    const toggleMenu = () => {
+        if (!navLinks || !navToggle) return;
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('active', isOpen);
+        backdrop.classList.toggle('active', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    const closeMenu = () => {
+        if (!navLinks || !navToggle) return;
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        backdrop.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    };
+
+    if (navToggle) {
+        navToggle.addEventListener('click', toggleMenu);
+    }
+    backdrop.addEventListener('click', closeMenu);
+
+    // Close menu when tapping any link
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+});
